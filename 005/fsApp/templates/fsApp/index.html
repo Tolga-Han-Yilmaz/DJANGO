@@ -1,0 +1,18 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'app/style.css' %}" />
+</head>
+<h1>fsApp</h1>
+{{ caption | upper }}
+<br />
+<ul>
+  {% for i in my_list %}
+  <li>{{ i }}</li>
+  {% endfor %}
+</ul>
+
+{% comment %} This is multiline comment {% endcomment %} {% comment %} #Django
+uygulamalarında geriye bir html sayfası döndürmek için render() metodunu
+kullanıyor olmalıyız. render() metodu ilk parametre olarak uygulamaya yapılan
+request nesnesini parametre olarak alması gerekiyor. İkinci parametre olarak ise
+döndürülecek html sayfasının ismini alır. {% endcomment %}

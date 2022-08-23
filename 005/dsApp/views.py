@@ -11,9 +11,4 @@ def home(request):
     # print(request.META)
     # html="<h1 style='color:red'>fsApp</h1>"
     # return HttpResponse(html)
-    context = {
-        'caption': 'clarusway',
-        'dict1': {'django': 'best framework'},
-        'my_list': [2, 3, 4]
-    }
-    return render(request,"fsApp/index.html",context)
+    return render(request,"dsApp/index.html")
