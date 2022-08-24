@@ -1,0 +1,8 @@
+{% extends "student/base.html" %} {% block container %}
+<form action="">
+  {% csrf_token %} {{form.as_p}}
+  <label for="">student name</label>
+  <input type="text" name="name" />
+  <input type="submit" value="OK" />
+</form>
+{% endblock container %}
