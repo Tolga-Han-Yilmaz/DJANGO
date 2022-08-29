@@ -1,0 +1,9 @@
+.navbar {
+  background-color: coral;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
