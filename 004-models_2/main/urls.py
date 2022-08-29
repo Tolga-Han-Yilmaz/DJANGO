@@ -20,7 +20,7 @@ from firstapp.views import home
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("",home),
-     path("firstapp",include("firstapp.urls")),   # firstapp/urls.py
+     path("firstapp/",include("firstapp.urls")),   # firstapp/urls.py
 ]
 
 # View Static/Media Files:
