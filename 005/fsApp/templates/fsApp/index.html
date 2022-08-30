@@ -1,6 +1,6 @@
 {% load static %}
 <head>
-  <link rel="stylesheet" href="{% static 'app/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'fsApp/index.css' %}" />
 </head>
 <h1>fsApp</h1>
 {{ caption | upper }}
@@ -10,6 +10,8 @@
   <li>{{ i }}</li>
   {% endfor %}
 </ul>
+
+<img src="{% static 'fsApp/404.jpeg' %}" alt="" />
 
 {% comment %} This is multiline comment {% endcomment %} {% comment %} #Django
 uygulamalarında geriye bir html sayfası döndürmek için render() metodunu
