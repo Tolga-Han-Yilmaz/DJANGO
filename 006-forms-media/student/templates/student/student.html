@@ -1,8 +1,14 @@
-{% extends "student/base.html" %} {% block container %}
-<form action="">
-  {% csrf_token %} {{form.as_p}}
-  <label for="">student name</label>
-  <input type="text" name="name" />
-  <input type="submit" value="OK" />
-</form>
+{% extends "student/base.html" %} 
+
+{% block container %}
+
+  <form action="" method="POST">
+      {% comment %} formun bizim tarafımızdan gönderildiğini teyit ediyor {% endcomment %}
+    {% csrf_token %} 
+    {% comment %} alt alta sıralıyor {% endcomment %}
+    {{ form.as_p }} 
+    
+    <input type="submit" value="OK" />
+  </form>
+
 {% endblock container %}
