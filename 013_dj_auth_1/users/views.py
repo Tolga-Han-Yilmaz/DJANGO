@@ -11,6 +11,13 @@ def user_logout(request):
 def register(request):
     form_user=UserForm()
     form_profile=UserProfileForm()
+    if request.method == "POST":
+        form_user = UserForm(request.POST)
+        form_profile = UserProfileForm(request.POST,request.FILES)
+        if form_user.isvalid() and form_profile.is_valid():
+            form_user.save()
+
+            
     context = {
         "form_profile":form_profile,
         "form_user":form_user    
